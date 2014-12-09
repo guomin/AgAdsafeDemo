@@ -14,6 +14,12 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+# =============================
+# Windows VS C++ project Files
+# =============================
+*.ncb
+*.ilk
+Debug/
 # =========================
 # Operating System Files
 # =========================
@@ -41,3 +47,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+Debug/AgAdsafeDemo.ilk
+Debug/agnetfilter.ilk
+AgAdsafeDemo/Debug/BuildLog.htm
+agnetfilter/Debug/BuildLog.htm

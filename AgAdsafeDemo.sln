@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookDemo", "HookDemo\HookDe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookDll", "HookDll\HookDll.vcproj", "{3888FAC5-C20E-4373-9E7D-6E38B6D0CBDB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookDialogDemo", "HookDialogDemo\HookDialogDemo.vcproj", "{8B587111-5E3A-411F-B4AD-F87F9D1C3D04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +33,10 @@ Global
 		{3888FAC5-C20E-4373-9E7D-6E38B6D0CBDB}.Debug|Win32.Build.0 = Debug|Win32
 		{3888FAC5-C20E-4373-9E7D-6E38B6D0CBDB}.Release|Win32.ActiveCfg = Release|Win32
 		{3888FAC5-C20E-4373-9E7D-6E38B6D0CBDB}.Release|Win32.Build.0 = Release|Win32
+		{8B587111-5E3A-411F-B4AD-F87F9D1C3D04}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8B587111-5E3A-411F-B4AD-F87F9D1C3D04}.Debug|Win32.Build.0 = Debug|Win32
+		{8B587111-5E3A-411F-B4AD-F87F9D1C3D04}.Release|Win32.ActiveCfg = Release|Win32
+		{8B587111-5E3A-411F-B4AD-F87F9D1C3D04}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

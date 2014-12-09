@@ -47,7 +47,7 @@
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="false"
-				UsePrecompiledHeader="2"
+				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				DebugInformationFormat="4"
 			/>
@@ -121,7 +121,7 @@
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;AGNETFILTER_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
-				UsePrecompiledHeader="2"
+				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				DebugInformationFormat="3"
 			/>
@@ -136,6 +136,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="wininet.lib winhttp.lib distorm.lib"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -221,11 +222,19 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\util.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\WinHttpHook.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\WinInetHook.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\WsHook.cpp"
 				>
 			</File>
 		</Filter>
@@ -235,6 +244,10 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\InputMoniter.h"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.h"
 				>
 			</File>
@@ -243,11 +256,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\util.h"
+				>
+			</File>
+			<File
 				RelativePath=".\WinHttpHook.h"
 				>
 			</File>
 			<File
 				RelativePath=".\WinInetHook.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WsHook.h"
 				>
 			</File>
 		</Filter>
@@ -274,6 +295,14 @@
 							UsePrecompiledHeader="0"
 						/>
 					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\ncodehook\NCodeHook.h"
@@ -288,6 +317,14 @@
 					>
 					<FileConfiguration
 						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
 						>
 						<Tool
 							Name="VCCLCompilerTool"
