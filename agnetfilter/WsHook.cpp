@@ -47,16 +47,33 @@ int WSAAPI connect_Hook(IN SOCKET s, const struct sockaddr FAR * name, IN int na
 			stSvrAddrIn.sin_addr.s_addr = inet_addr("127.0.0.1");
 			if (bMark)
 			{
+				
 				ret = pHook->connect(s, name, namelen);
 			}
 			else
 			{
-				ret = pHook->connect(s, name, namelen);
-				//ret = pHook->connect(s, (SOCKADDR*)&stSvrAddrIn/*name*/, sizeof(SOCKADDR)/*namelen*/);
+				//ret = pHook->connect(s, name, namelen);
+				//unsigned long ul = 0;
+				//ioctlsocket (s, FIONBIO, (unsigned long*)&ul);
+				ret = pHook->connect(s, (SOCKADDR*)&stSvrAddrIn/*name*/, sizeof(SOCKADDR)/*namelen*/);
 			}
 			
 			if (SOCKET_ERROR == ret)
 			{
+				//DWORD dw = GetLastError();
+				//LPVOID lpMsgBuf;
+// 				FormatMessageA(
+// 					FORMAT_MESSAGE_ALLOCATE_BUFFER |
+// 					FORMAT_MESSAGE_FROM_SYSTEM |
+// 					FORMAT_MESSAGE_IGNORE_INSERTS,
+// 					NULL,
+// 					GetLastError(),
+// 					MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), // Default language
+// 					(LPSTR) &lpMsgBuf,
+// 					0,
+// 					NULL
+// 					);
+				//WriteAGLog((LPCSTR)lpMsgBuf);
 				WriteAGLog("ret==SOCKET_ERROR");
 			}
 		}
